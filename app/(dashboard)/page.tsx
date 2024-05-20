@@ -3,7 +3,9 @@ import { User } from "lucide-react";
 
 const Home = () => {
   return ( 
-    <UserButton afterSignOutUrl="/" />
+    <div>
+      <p>Dashboard Page</p>
+    </div>
   );
 }
 
