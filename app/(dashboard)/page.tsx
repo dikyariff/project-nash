@@ -1,12 +1,18 @@
-import { UserButton } from "@clerk/nextjs";
-import { User } from "lucide-react";
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { useNewAccount } from "@/features/accounts/hooks/use-new-account";
 
 const Home = () => {
-  return ( 
+  const { onOpen } = useNewAccount();
+
+  return (
     <div>
-      <p>Dashboard Page</p>
+      <Button onClick={onOpen}>
+        Add an Account
+      </Button>
     </div>
   );
-}
+};
 
 export default Home;
