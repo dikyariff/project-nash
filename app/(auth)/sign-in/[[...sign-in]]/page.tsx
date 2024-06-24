@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Loader2 } from "lucide-react";
 import { SignIn, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const SignInPage = () => {
   return (
@@ -19,6 +21,13 @@ const SignInPage = () => {
           <ClerkLoading>
             <Loader2 className="animate-spin text-muted-foreground"/>
           </ClerkLoading>
+        </div>
+        <div className="absolute bottom-5 left-5">
+          <Link href="https://github.com/dikyariff/project-nash" target="_blank">
+            <Button variant="outline" className="text-muted-foreground">
+              Developed by Diki
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="h-full bg-blue-600 hidden lg:flex items-center justify-center">
